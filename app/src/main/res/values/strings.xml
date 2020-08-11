@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">TaverNavi</string>
+
+    <!-- API Key -->
+    <string name="google_maps_key" translatable="false">AIzaSyCzuSxlcomo9hhhlcyhDLx6Z1z60iW9DT0</string>
+    <string name="gurunavi_api_key" translatable="false">764f2d74b71fbdc9df18eca86436379e</string>
+    <!-- MainPage String -->
+    <string name="title">TaverNavi</string>
+    <string name="txtSearch">検索条件</string>
+    <string name="checkBox1">クレジットカード</string>
+    <string name="checkBox2">電子マネー</string>
+    <string name="btnSearch">検索する</string>
+    <string name="txtGenre">料理ジャンル</string>
+    <string name="btnGenre">ジャンル一覧</string>
+    <string name="genre_drink">居酒屋</string>
+    <string name="genre_sushi">お寿司</string>
+    <string name="genre_meat">お肉</string>
+    <string name="genre_ra_men">ラーメン</string>
+    <!-- RestaurantsListActivity -->
+    <string name="resultTitle">検索結果一覧</string>
+
+    <!-- Default - Activity -->
+    <string name="txtTel">電話をかける</string>
+    <string name="standardInfo">基本情報</string>
+    <string name="pr">店舗紹介</string>
+    <string name="defaultInfo">詳細情報</string>
+    <string name="nav_default">詳細</string>
+    <string name="nav_coupon">クーポン</string>
+    <string name="nav_map">マップ</string>
+
+    <!-- Spinner -->
+    <string-array name="areaSpinner">
+        <item>指定なし</item>
+        <item>現在地</item>
+        <item>東京都</item>
+        <item>神奈川県</item>
+        <item>埼玉県</item>
+        <item>千葉県</item>
+        <item>群馬県</item>
+        <item>栃木県</item>
+        <item>茨城県</item>
+    </string-array>
+    <string-array name="radiusSpinner">
+        <item>指定なし</item>
+        <item>300m</item>
+        <item>500m</item>
+        <item>1,000m</item>
+        <item>2,000m</item>
+        <item>3,000m</item>
+    </string-array>
+    <string-array name="minBudgetSpinner">
+        <item>下限なし</item>
+        <item>¥1,000</item>
+        <item>¥2,000</item>
+        <item>¥3,000</item>
+        <item>¥4,000</item>
+        <item>¥5,000</item>
+        <item>¥6,000</item>
+        <item>¥8,000</item>
+        <item>¥10.000</item>
+        <item>¥15,000</item>
+    </string-array>
+    <string-array name="maxBudgetSpinner">
+        <item>上限なし</item>
+        <item>¥1,000</item>
+        <item>¥2,000</item>
+        <item>¥3,000</item>
+        <item>¥4,000</item>
+        <item>¥5,000</item>
+        <item>¥6,000</item>
+        <item>¥8,000</item>
+        <item>¥10.000</item>
+        <item>¥15,000</item>
+    </string-array>
+    <string-array name="daySpinner">
+        <item>夜</item>
+        <item>昼</item>
+    </string-array>
+    <string name="title_activity_default_navigation">DefaultNavigationActivity</string>
+    <!--
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    -->
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_default"
+        android:icon="@drawable/text1"
+        android:title="@string/nav_default" />
+
+    <item
+        android:id="@+id/navigation_coupon"
+        android:icon="@drawable/ticket2"
+        android:title="@string/nav_coupon" />
+
+    <item
+        android:id="@+id/navigation_map"
+        android:icon="@drawable/pin2"
+        android:title="@string/nav_map" />
+
+</menu>

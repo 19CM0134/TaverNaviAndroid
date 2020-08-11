@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="colorPrimary">#6200EE</color>-->
+<!--    <color name="colorPrimaryDark">#3700B3</color>-->
+<!--    <color name="colorAccent">#03DAC5</color>-->
+
+    <color name="DarkSienna">#49111C</color>
+    <color name="RichBlackFOGRA39">#0A0908</color>
+    <color name="Cultured">#F2F4F3</color>
+    <color name="ChineseYellow">#FFB20F</color>
+    <color name="Cream">#FFF3B8</color>
+    <color name="HalfCream">#7FFFF3B8</color>
+    <color name="Clear">#00FFFFFF</color>
+</resources>

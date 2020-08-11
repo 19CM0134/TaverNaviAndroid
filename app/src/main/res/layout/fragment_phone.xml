@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/phone_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_radius">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:translationZ="2dp"
+            android:src="@drawable/tel2" />
+
+        <Button
+            android:id="@+id/btnPhone"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginStart="20dp"
+            android:background="@color/Clear"
+            style="?attr/borderlessButtonStyle"
+            android:text="@string/txtTel"
+            android:textAlignment="textStart"
+            android:textColor="@color/RichBlackFOGRA39"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
