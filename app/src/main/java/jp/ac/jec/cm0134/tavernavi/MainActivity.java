@@ -56,12 +56,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         setFragment();
         // LocationManagerインスタンス生成
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-        // Android 6, API 23以上でパーミッションの確認
-        if (Build.VERSION.SDK_INT >= 23) {
-            checkPermission();
-        } else {
-            startGPS();
-        }
     }
 
     @Override
@@ -100,6 +94,17 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 return;
             }
             locationManager.removeUpdates(this);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Android 6, API 23以上でパーミッションの確認
+        if (Build.VERSION.SDK_INT >= 23) {
+            checkPermission();
+        } else {
+            startGPS();
         }
     }
 
