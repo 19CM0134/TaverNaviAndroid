@@ -24,7 +24,6 @@ public class RestaurantsListActivity extends AppCompatActivity {
     protected RowModelAdapter adapter;
     private ListView list;
     private TextView txtHitPerPage;
-    private String key = "764f2d74b71fbdc9df18eca86436379e";
     // endregion Properties
 
     // region Setter
@@ -49,22 +48,23 @@ public class RestaurantsListActivity extends AppCompatActivity {
                 Intent intent = new Intent(RestaurantsListActivity.this, DefaultNavigationActivity.class);
                 RestaurantData item = new RestaurantData();
                         item = adapter.getItem(i);
-                        intent.putExtra("title"     , item.getName());
-                        intent.putExtra("image"     , item.getShop_image1());
-                        intent.putExtra("holiday"   , item.getHoliday());
-                        intent.putExtra("tel"       , item.getTel());
-                        intent.putExtra("address"   , item.getAddress());
-                        intent.putExtra("opentime"  , item.getOpentime());
-                        intent.putExtra("pr_short"  , item.getPr_short());
-                        intent.putExtra("pr_long"   , item.getPr_long());
-                        intent.putExtra("coupon_url", item.getMobile());
-                        intent.putExtra("latitude"  , item.getLatitude());
-                        intent.putExtra("longitude" , item.getLongitude());
+                        intent.putExtra("title"      , item.getName());
+                        intent.putExtra("image"      , item.getShop_image1());
+                        intent.putExtra("holiday"    , item.getHoliday());
+                        intent.putExtra("tel"        , item.getTel());
+                        intent.putExtra("address"    , item.getAddress());
+                        intent.putExtra("opentime"   , item.getOpentime());
+                        intent.putExtra("pr_short"   , item.getPr_short());
+                        intent.putExtra("pr_long"    , item.getPr_long());
+                        intent.putExtra("coupon_url" , item.getMobile());
+                        intent.putExtra("latitude"   , item.getLatitude());
+                        intent.putExtra("longitude"  , item.getLongitude());
+                        intent.putExtra("e_money"    , item.getE_money());
+                        intent.putExtra("credit_card", item.getCredit_card());
 
                         startActivity(intent);
             }
         });
-
     }
 
     @Override
@@ -81,8 +81,7 @@ public class RestaurantsListActivity extends AppCompatActivity {
         uriBuilder.scheme("https");
         uriBuilder.authority("api.gnavi.co.jp");
         uriBuilder.path("RestSearchAPI/v3/");
-        uriBuilder.appendQueryParameter("keyid", key);
-
+        uriBuilder.appendQueryParameter("keyid", getResources().getString(R.string.gurunavi_api_key));
         if (intent.getStringExtra("area").equals("指定なし")) {
             uriBuilder.appendQueryParameter("area", "AREA110");
         } else {

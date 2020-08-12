@@ -37,6 +37,8 @@ public class JsonHelper {
         data.setHoliday( json.getString("holiday"));
         data.setBudget( json.getInt("budget"));
         data.setLunch( json.get("lunch"));
+        data.setCredit_card( json.getString("credit_card"));
+        data.setE_money( json.getString("e_money"));
 
         JSONObject pr = json.getJSONObject("pr");
         data.setPr_short( pr.getString("pr_short"));

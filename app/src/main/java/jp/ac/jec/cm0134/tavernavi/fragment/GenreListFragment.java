@@ -61,7 +61,6 @@ public class GenreListFragment extends Fragment {
 
     // region Inner Class
     class ImageButtonClickListener implements View.OnClickListener {
-
         @Override
         public void onClick(View view) {
 
