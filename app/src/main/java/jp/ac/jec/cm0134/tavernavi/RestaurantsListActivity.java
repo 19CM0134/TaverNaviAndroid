@@ -25,12 +25,13 @@ public class RestaurantsListActivity extends AppCompatActivity {
     private ListView list;
     private TextView txtHitPerPage;
     private String key = "764f2d74b71fbdc9df18eca86436379e";
+
     // endregion Properties
 
 
     public void setCount(int count) {
         txtHitPerPage = findViewById(R.id.txtHitCount);
-        txtHitPerPage.setText(count + "件");
+        txtHitPerPage.setText(count + "件表示");
     }
 
     // region Override

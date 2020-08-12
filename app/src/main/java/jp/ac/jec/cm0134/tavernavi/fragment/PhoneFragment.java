@@ -84,7 +84,7 @@ public class PhoneFragment extends Fragment {
                 .setPositiveButton("発信", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(getActivity(), "開発段階の為、架空の電話番号を入力しています", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "開発段階の為、架空の電話番号を入力しています", Toast.LENGTH_LONG).show();
                         Uri uri = Uri.parse("tel:000-0000-0000");
                         Intent intent = new Intent(Intent.ACTION_DIAL, uri);
                         startActivity(intent);
