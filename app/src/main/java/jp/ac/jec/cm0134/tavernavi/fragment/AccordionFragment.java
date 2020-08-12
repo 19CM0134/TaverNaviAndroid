@@ -77,15 +77,12 @@ public class AccordionFragment extends Fragment {
     private void setText(View view) {
         txtTitle = (TextView)view.findViewById(R.id.txtAccordion);
         txtTitle.setText(title);
-
         txtContents = (TextView)view.findViewById(R.id.txtContents);
-        txtContents.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
+        txtContents.setVisibility(View.GONE);
     }
 
     private void setAccordion(View view) {
         ibtnArrow = view.findViewById(R.id.ibtnArrow);
-        linearLayout = view.findViewById(R.id.contents_area_linear);
-        linearLayout.setMinimumHeight(0);
         // 展開ボタン押下時
         ibtnArrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,12 +91,12 @@ public class AccordionFragment extends Fragment {
                     // 内容エリアが閉じている時
                     ibtnArrow.setImageResource(R.drawable.arrow2);
                     txtContents.setText(content);
-                    txtContents.setHeight(300);
+                    txtContents.setVisibility(View.VISIBLE);
                     num++;
                 } else {
                     // 内容エリアが開いている時
                     ibtnArrow.setImageResource(R.drawable.arrow1);
-                    txtContents.setHeight(linearLayout.getMinimumHeight());
+                    txtContents.setVisibility(View.GONE);
                     num--;
                 }
             }

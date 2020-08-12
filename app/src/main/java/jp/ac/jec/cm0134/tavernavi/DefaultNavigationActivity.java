@@ -82,7 +82,7 @@ public class DefaultNavigationActivity extends AppCompatActivity {
         phoneNumber  = intent.getStringExtra("tel");
         standardInfo = intent.getStringExtra("opentime") + "\n" + intent.getStringExtra("holiday");
         pr = intent.getStringExtra("pr_short") + "\n" + intent.getStringExtra("pr_long");
-        defaultInfo = intent.getStringExtra("credit_card");
+        defaultInfo = intent.getStringExtra("credit_card") + "\n" + intent.getStringExtra("e_money");
         coupon_url = intent.getStringExtra("coupon_url");
         latitude   = intent.getStringExtra("latitude");
         longitude  = intent.getStringExtra("longitude");
@@ -110,7 +110,7 @@ public class DefaultNavigationActivity extends AppCompatActivity {
         defaultFragment.setPhoneNumber(this.phoneNumber);
         defaultFragment.setContents1(this.standardInfo);
         defaultFragment.setContents2(this.pr);
-//        defaultFragment.setContents3(this.defaultInfo);
+        defaultFragment.setContents3(this.defaultInfo);
     }
     // endregion Private Function
 }

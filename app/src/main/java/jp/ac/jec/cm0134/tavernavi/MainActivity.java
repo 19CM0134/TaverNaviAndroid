@@ -172,6 +172,11 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                         Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                     return;
                 }
+                latLng = new LatLng(locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER).getLatitude(),
+                        locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER).getLongitude());
+
+                mapFragment.getMapAsync(this);
+
                 locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
                         MinTime, MinDistance, this);
             } catch (Exception e) {
