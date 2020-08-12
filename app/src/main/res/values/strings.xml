@@ -30,7 +30,7 @@
 
     <!-- Spinner -->
     <string-array name="areaSpinner">
-        <item>指定なし</item>
+        <item>関東全域</item>
         <item>現在地</item>
         <item>東京都</item>
         <item>神奈川県</item>

@@ -63,7 +63,6 @@ public class AccordionFragment extends Fragment {
     // region Initializer
     @CheckResult
     public static AccordionFragment createInstance(String name, String contents) {
-
         AccordionFragment fragment = new AccordionFragment();
         Bundle args = new Bundle();
         args.putString(KEY_NAME, name);

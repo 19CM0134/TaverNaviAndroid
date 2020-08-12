@@ -23,8 +23,15 @@ public class RestaurantsListActivity extends AppCompatActivity {
     // region Properties
     protected RowModelAdapter adapter;
     private ListView list;
+    private TextView txtHitPerPage;
     private String key = "764f2d74b71fbdc9df18eca86436379e";
     // endregion Properties
+
+
+    public void setCount(int count) {
+        txtHitPerPage = findViewById(R.id.txtHitCount);
+        txtHitPerPage.setText(count + "件");
+    }
 
     // region Override
     @Override
@@ -38,8 +45,8 @@ public class RestaurantsListActivity extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                RestaurantData item = new RestaurantData();
                 Intent intent = new Intent(RestaurantsListActivity.this, DefaultNavigationActivity.class);
+                RestaurantData item = new RestaurantData();
                         item = adapter.getItem(i);
                         intent.putExtra("title"     , item.getName());
                         intent.putExtra("image"     , item.getShop_image1());
@@ -56,12 +63,12 @@ public class RestaurantsListActivity extends AppCompatActivity {
                         startActivity(intent);
             }
         });
+
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-
         getJsonData();
     }
     // endregion Override

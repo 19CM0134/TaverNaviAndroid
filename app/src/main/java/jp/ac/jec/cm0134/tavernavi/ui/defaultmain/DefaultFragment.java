@@ -23,15 +23,14 @@ import jp.ac.jec.cm0134.tavernavi.fragment.PhoneFragment;
 
 public class DefaultFragment extends Fragment {
 
+    // TODO: Contents3
+
     // region Properties
     private DefaultViewModel defaultViewModel;
-
     private ImageView imageView;
-    private int imageWidth;
-    private int imageHeight;
-
     private String title;
     private String image;
+    private String phoneNumber;
     private String contents1;
     private String contents2;
     private String contents3;
@@ -43,6 +42,9 @@ public class DefaultFragment extends Fragment {
     }
     public void setImage(String image) {
         this.image = image;
+    }
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
     public void setContents1(String contents1) {
         this.contents1 = contents1;
@@ -76,7 +78,6 @@ public class DefaultFragment extends Fragment {
         };
         imageView.getViewTreeObserver().addOnGlobalLayoutListener(layoutListener);
         return view;
-//        return inflater.inflate(R.layout.fragment_navigation_default, container, false);
     }
 
     @Override
@@ -85,18 +86,13 @@ public class DefaultFragment extends Fragment {
 
         setFragment();
         setTitle(view);
-        setImage(view);
-        Log.d("DefaultFragment","imageView : " + this.image);
     }
-
     // endregion Override
 
     // region Private Function
     private void setFragment() {
-        PhoneFragment phoneFragment = new PhoneFragment();
-//        AccordionFragment fragment = new AccordionFragment();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.add(R.id.fragment, phoneFragment);
+        transaction.add(R.id.fragment, PhoneFragment.createInstance(this.phoneNumber));
         transaction.add(R.id.fragment, AccordionFragment.createInstance("基本情報", this.contents1));
         transaction.add(R.id.fragment, AccordionFragment.createInstance("店舗詳細", this.contents2));
         transaction.add(R.id.fragment, AccordionFragment.createInstance("詳細情報", "Contents3"));
@@ -106,10 +102,6 @@ public class DefaultFragment extends Fragment {
     private void setTitle(View view) {
         TextView title = (TextView)view.findViewById(R.id.default_restaurant_name);
         title.setText(this.title);
-    }
-    private void setImage(View view) {
-//       imageView = (ImageView) view.findViewById(R.id.default_restaurant_imageView);
-//       Picasso.get().load(this.image).resize(imageWidth, imageHeight).into(imageView);
     }
     // endregion Private Function
 }

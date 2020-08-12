@@ -24,7 +24,6 @@ public class DefaultNavigationActivity extends AppCompatActivity {
     private DefaultFragment defaultFragment;
     private CouponFragment couponFragment;
     private MapFragment mapFragment;
-
     private String title;
     private String image;
     private String phoneNumber;
@@ -32,8 +31,9 @@ public class DefaultNavigationActivity extends AppCompatActivity {
     private String pr;
     private String defaultInfo;
     private String coupon_url;
-    private double latitude;
-    private double longitude;
+    private String latitude;
+    private String longitude;
+    private String address;
     // endregion Properties
 
     // region Override
@@ -79,17 +79,23 @@ public class DefaultNavigationActivity extends AppCompatActivity {
         Intent intent = getIntent();
         title = intent.getStringExtra("title");
         image = intent.getStringExtra("image");
-        phoneNumber = intent.getStringExtra("tel");
+        phoneNumber  = intent.getStringExtra("tel");
         standardInfo = intent.getStringExtra("opentime") + "\n" + intent.getStringExtra("holiday");
         pr = intent.getStringExtra("pr_short") + "\n" + intent.getStringExtra("pr_long");
 //        defaultInfo = intent.getStringExtra()
         coupon_url = intent.getStringExtra("coupon_url");
-        latitude = intent.getDoubleExtra("latitude",35);
-        longitude = intent.getDoubleExtra("longitude", 139);
+        latitude   = intent.getStringExtra("latitude");
+        longitude  = intent.getStringExtra("longitude");
+        address    = intent.getStringExtra("address");
 
         defaultFragment = new DefaultFragment();
-        couponFragment = new CouponFragment();
+        couponFragment  = new CouponFragment();
+        couponFragment.setCouponUrl(this.coupon_url);
         mapFragment = new MapFragment();
+        mapFragment.setRestaurantName(this.title);
+        mapFragment.setAddress(this.address);
+        mapFragment.setLatitude(this.latitude);
+        mapFragment.setLongitude(this.longitude);
         setFragment();
     }
     // endregion Override
@@ -101,6 +107,7 @@ public class DefaultNavigationActivity extends AppCompatActivity {
         transaction.commit();
         defaultFragment.setTitle(this.title);
         defaultFragment.setImage(this.image);
+        defaultFragment.setPhoneNumber(this.phoneNumber);
         defaultFragment.setContents1(this.standardInfo);
         defaultFragment.setContents2(this.pr);
 //        defaultFragment.setContents3(this.defaultInfo);

@@ -37,11 +37,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private SupportMapFragment mapFragment;
     private final int REQUEST_PERMISSION = 1000;
     private LocationManager locationManager;
-
     private LatLng latLng;
     private String latitude;
     private String longitude;
-
     private static final int MinTime = 1000;
     private static final float MinDistance = 50;
     // Fragment

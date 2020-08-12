@@ -68,6 +68,7 @@ public class GenreListFragment extends Fragment implements View.OnClickListener 
     }
     // endregion Private Function
 
+    // region Inner Class
     class ImageButtonClickListener implements View.OnClickListener {
 
         @Override
@@ -94,4 +95,5 @@ public class GenreListFragment extends Fragment implements View.OnClickListener 
             startActivity(intent);
         }
     }
+    // endregion Inner Class
 }

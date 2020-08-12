@@ -6,11 +6,17 @@
         <item name="colorPrimary">@color/ChineseYellow</item>
         <item name="colorPrimaryDark">@color/Cultured</item>
         <item name="colorAccent">@color/Cultured</item>
+        
+        <item name="android:alertDialogTheme">@style/MyAlertDialogStyle</item>
         <!-- タイトルバーを消す -->
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/RichBlackFOGRA39</item>
     </style>
 
 </resources>

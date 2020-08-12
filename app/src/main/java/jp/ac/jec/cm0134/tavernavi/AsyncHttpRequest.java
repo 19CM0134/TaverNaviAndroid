@@ -52,6 +52,8 @@ public class AsyncHttpRequest extends AsyncTask<Uri.Builder, Void, ArrayList<Res
         }
         ListView list = (ListView)activity.findViewById(R.id.resultList);
         list.setAdapter(activity.adapter);
+        activity.setCount(restrantData.size());
+
     }
 
     @Override

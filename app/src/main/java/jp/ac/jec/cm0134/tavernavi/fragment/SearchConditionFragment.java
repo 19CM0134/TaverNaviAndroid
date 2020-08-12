@@ -29,7 +29,6 @@ public class SearchConditionFragment extends Fragment implements View.OnClickLis
     private CheckBox creditCardCheckBox;
     private CheckBox eMoneyCheckBox;
     private Button searchButton;
-
     // 各項目の選択された値を保持する変数
     private String areaItem;
     private String radiusItem;
@@ -38,7 +37,6 @@ public class SearchConditionFragment extends Fragment implements View.OnClickLis
     private String dayItem;
     private int check1;
     private int check2;
-
     private String latitude;
     private String longitude;
     // endregion Properties
@@ -87,8 +85,6 @@ public class SearchConditionFragment extends Fragment implements View.OnClickLis
         startActivity(intent);
     }
     // endregion
-
-
 
     // region Private Function
     private void setSpinner(View view) {

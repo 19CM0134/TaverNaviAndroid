@@ -18,6 +18,16 @@
         android:textColor="@color/Cultured"
         android:textSize="30sp" />
 
+    <TextView
+        android:id="@+id/txtHitCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textColor="@color/RichBlackFOGRA39"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        />
+
     <ListView
         android:id="@+id/resultList"
         android:layout_width="match_parent"
