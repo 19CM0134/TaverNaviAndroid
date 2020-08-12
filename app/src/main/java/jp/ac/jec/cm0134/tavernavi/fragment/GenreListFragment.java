@@ -15,9 +15,7 @@ import androidx.fragment.app.Fragment;
 import jp.ac.jec.cm0134.tavernavi.R;
 import jp.ac.jec.cm0134.tavernavi.RestaurantsListActivity;
 
-public class GenreListFragment extends Fragment implements View.OnClickListener {
-
-    // TODO: Buttonのイベント
+public class GenreListFragment extends Fragment {
 
     // region Properties
     private Button btnGenre;
@@ -39,18 +37,11 @@ public class GenreListFragment extends Fragment implements View.OnClickListener 
         setImageButton(view);
     }
 
-    @Override
-    public void onClick(View view) {
-//        Intent intent = new Intent(getActivity(), );
-//        startActivity(intent);
-
-    }
     // endregion Override
 
     // region Private Function
     private void setButton(View view) {
         btnGenre = view.findViewById(R.id.btnGenre);
-        btnGenre.setOnClickListener(this);
     }
 
     private void setImageButton(View view) {

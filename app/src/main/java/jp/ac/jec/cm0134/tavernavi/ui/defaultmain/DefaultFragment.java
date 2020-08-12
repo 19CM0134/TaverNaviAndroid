@@ -23,8 +23,6 @@ import jp.ac.jec.cm0134.tavernavi.fragment.PhoneFragment;
 
 public class DefaultFragment extends Fragment {
 
-    // TODO: Contents3
-
     // region Properties
     private DefaultViewModel defaultViewModel;
     private ImageView imageView;
@@ -95,7 +93,7 @@ public class DefaultFragment extends Fragment {
         transaction.add(R.id.fragment, PhoneFragment.createInstance(this.phoneNumber));
         transaction.add(R.id.fragment, AccordionFragment.createInstance("基本情報", this.contents1));
         transaction.add(R.id.fragment, AccordionFragment.createInstance("店舗詳細", this.contents2));
-        transaction.add(R.id.fragment, AccordionFragment.createInstance("詳細情報", "Contents3"));
+        transaction.add(R.id.fragment, AccordionFragment.createInstance("詳細情報", this.contents3));
         transaction.commit();
     }
 
